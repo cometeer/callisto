@@ -6,4 +6,4 @@ before_install:
   npm install velocity-ci
 
 script:
-  bash /tests/jasmine/test.sh
+  bash ./tests/jasmine/test.sh
