@@ -1,0 +1,22 @@
+{
+  "name": "callisto",
+  "version": "1.0.0",
+  "description": "![TravisCI](https://travis-ci.org/cometeer/callisto.svg)\r # callisto\r proto &amp; trials",
+  "main": "\"\"",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cometeer/callisto.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cometeer/callisto/issues"
+  },
+  "homepage": "https://github.com/cometeer/callisto#readme"
+}
