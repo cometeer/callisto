@@ -2,7 +2,23 @@
   <h1>Create a new contractor.</h1>
   <form>
     <label>Name:</label>
-    <input id="contractorName" name="name" placeholder="Name..." type="text" value=""/>
+    <input id="contractorName" name="contractorName" placeholder="Name..." type="text" value=""/><br>
+    <label>Option Name:</label>
+    <input id="newConfigOptionName" name="newConfigOptionName" type="text" value=""/>
+    <label>Option Value:</label>
+    <input id="newConfigOptionValue" name="newConfigOptionValue" type="text" value=""/><br>
+    <button class="addOption">Add Option</button><br>
+    {{#each configOptions}}
+      {{> configOption }}
+    {{/each }}
     <input type="submit" value="Submit"/>
   </form>
+</template>
+
+<template name="configOption">
+  {{ logThis }}
+  <label>Option Name:</label>
+  <input id="newConfigOptionName" name="newConfigOptionName" type="text" value="{{ this.name }}"/>
+  <label>Option Value:</label>
+  <input id="newConfigOptionValue" name="newConfigOptionValue" type="text" value="{{ this.value }}"/><br>
 </template>
