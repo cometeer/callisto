@@ -7085,7 +7085,7 @@ var packageMetadata = {
                 },
                 "version": {
                   "type": "constant",
-                  "value": "81e206d008e66a0a3c49394b979d47e36812c00d"
+                  "value": "c8b1bac92e91144855c3c7a48657303c456d4988"
                 },
                 "PUBLIC_SETTINGS": {
                   "type": "undefined"
@@ -7862,11 +7862,11 @@ var packageMetadata = {
       "members": {
         "autoupdateVersion": {
           "type": "constant",
-          "value": "a3cb9603b866e051cafc730f3d6348d4e7df931f"
+          "value": "b0272972e1d06c557d9beafd8fb3ba9710952993"
         },
         "autoupdateVersionRefreshable": {
           "type": "constant",
-          "value": "c63ef9464ee1471a99a429499745fa1f09cfe8c7"
+          "value": "fbce96dcfbae47236f6cd4b15c1ba7535bef9f6f"
         },
         "autoupdateVersionCordova": {
           "type": "constant",
@@ -10978,6 +10978,7 @@ var packageMetadata = {
   "constellation:velocity": {},
   "grigio:babel": {},
   "velocity:html-reporter": {},
+  "contractor": {},
   "livedata": {
     "DDP": {
       "type": "object",
