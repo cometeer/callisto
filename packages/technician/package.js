@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'contractor',
+  name: 'technician',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -13,34 +13,30 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
 
-  api.use(['templating'], 'client');
+  api.use('templating', 'client');
   api.use('underscore', 'client');
   api.use('iron:router', 'client');
-
   api.addFiles([
-    'lib/collections/Contractor.js'
+    'lib/collections/technician.js'
   ], [
     'client',
     'server'
   ]);
 
   api.addFiles([
-    'lib/publications/publications.js'
+    'lib/publications/technician.js'
   ], ['server']);
 
   api.addFiles('lib/routes/routes.js', 'client');
 
   api.addFiles([
-    'lib/templates/contractorCreate.html',
+    'lib/templates/technicianCreate.html',
   ], ['client']);
 
   api.addFiles([
-    'lib/templates/contractorCreate.js',
+    'lib/templates/technicianCreate.js',
   ], ['client']);
 });
 
 Package.onTest(function(api) {
-  api.use('sanjo:jasmine');
-  api.addFiles('tests/jasmine/server/unit/contractorSpec.js', 'server');
-  api.addFiles('tests/jasmine/client/integration/contractorSpec.js', 'client');
 });
