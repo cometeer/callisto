@@ -12,7 +12,6 @@ Template.technicianCreate.events({
     technician.address.houseNumberAdd = $('#houseNumberAdd').val();
     technician.address.city = $('#city').val();
     technician.address.country = $('#country').val();
-    console.log(technician);
     Meteor.call('technicianCreate', technician);
   },
 });

@@ -18,14 +18,14 @@ Package.onUse(function(api) {
   api.use('iron:router', 'client');
 
   api.addFiles([
-    'lib/collections/Contractor.js'
+    'lib/collections/contractor.js'
   ], [
     'client',
     'server'
   ]);
 
   api.addFiles([
-    'lib/publications/publications.js'
+    'lib/publications/contractor.js'
   ], ['server']);
 
   api.addFiles('lib/routes/routes.js', 'client');
