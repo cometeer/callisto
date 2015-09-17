@@ -28,9 +28,3 @@ Template.contractorCreate.helpers({
     return Session.get('configOptions');
   },
 });
-
-Template.configOption.helpers({
-  logThis: function(){
-    console.log(this);
-  }
-});
