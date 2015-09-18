@@ -13,5 +13,6 @@ Template.technicianCreate.events({
     technician.address.city = $('#city').val();
     technician.address.country = $('#country').val();
     Meteor.call('technicianCreate', technician);
+    document.getElementById("technicianCreateForm").reset();
   },
 });

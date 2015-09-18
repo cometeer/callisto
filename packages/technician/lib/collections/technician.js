@@ -38,13 +38,14 @@ TechnicianModel = function(data) {
     }
   };
   this.createSystemUser = function() {
-    if (this.isValid()) {
-      this.userId = Accounts.createUser({
-        username: this.firstName + this.lastName,
-        email: this.email,
-      });
-      Accounts.sendEnrollmentEmail(this.userId);
-    }
+  // TODO figure this out for google auth.
+  //   if (this.isValid()) {
+  //     this.userId = Accounts.createUser({
+  //       username: this.firstName + this.lastName,
+  //       email: this.email,
+  //     });
+  //     Accounts.sendEnrollmentEmail(this.userId);
+  //   }
   };
 };
 

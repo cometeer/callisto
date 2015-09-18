@@ -1,6 +1,8 @@
 Template.contractorCreate.events({
   'submit form': function(e) {
     e.preventDefault();
+    // TODO map form fields to contractor object and call meteor methods
+    document.getElementById("contractorCreateForm").reset();
   },
   'click .addOption': function(e) {
     // get the set of options

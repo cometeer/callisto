@@ -9,7 +9,6 @@ less
 iron:router
 babrahams:constellation
 accounts-ui
-accounts-password
 sanjo:jasmine
 constellation:velocity
 velocity:html-reporter
@@ -17,3 +16,4 @@ contractor
 technician
 momentjs:moment
 insecure
+accounts-google
