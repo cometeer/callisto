@@ -5,6 +5,7 @@ TechnicianModel = function(data) {
   // certificates may only be set by sepcial methods, data can be loaded from database but not set as part of creating a new object.
   if (data._id) {
     this._id = data._id;
+    this.userId = data.userId;
     this.certificates = data.certificates;
   }
   // model layout / accepted fields
@@ -20,6 +21,7 @@ TechnicianModel = function(data) {
   this.homeAddress.houseNumberAdd = data.address.houseNumberAdd;
   this.homeAddress.city = data.address.city;
   this.homeAddress.country = data.address.country;
+
   // validate self logic
   this.isValid = function() {
     if (this.email) {
@@ -27,8 +29,23 @@ TechnicianModel = function(data) {
     }
   };
   this.addCertificate = function(cert) {
-    // load existing
-    // add/update/remove
+    if (!this.certificates) {
+      this.certificates = [];
+    }
+    var c = new CertificateModel(cert);
+    if (c.isValid()) {
+      this.certificates.push(c);
+    }
+  };
+  this.createSystemUser = function() {
+  // TODO figure this out for google auth.
+  //   if (this.isValid()) {
+  //     this.userId = Accounts.createUser({
+  //       username: this.firstName + this.lastName,
+  //       email: this.email,
+  //     });
+  //     Accounts.sendEnrollmentEmail(this.userId);
+  //   }
   };
 };
 
@@ -40,15 +57,15 @@ TechnicianModelLoad = function(id) {
 };
 
 CertificateModel = function(cert) {
-  this.name = cert.name;
-  this.status = statusEnum[cert.status];
-
   var statusEnum = {
     active: 'active',
     pending: 'pending',
     closed: 'closed',
   };
-
+  this.name = cert.name;
+  this.status = statusEnum[cert.status];
+  this.validFrom = cert.validFrom;
+  this.validTo = cert.validTo;
   this.isValid = function() {
     if (this.status) {
       return true;
@@ -59,9 +76,11 @@ CertificateModel = function(cert) {
 Meteor.methods({
   technicianCreate: function(doc) {
     var t = new TechnicianModel(doc);
+    t.createSystemUser();
     if (t.isValid()) {
       Technicians.insert(t);
     }
+
   },
   technicianCertificateUpdate: function(techId, cert) {
     var t = TechnicianModelLoad(techId);
