@@ -1,0 +1,11 @@
+{
+  "firstName": "First name",
+  "middleName": "Middle name",
+  "lastName": "Last name",
+  "email": "Email address",
+  "street": "Streetname",
+  "houseNumber": "Housenumber",
+  "houseNumberAdd": "Addition",
+  "city": "City",
+  "country": "Country"
+}

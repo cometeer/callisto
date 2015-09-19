@@ -16,6 +16,8 @@ Package.onUse(function(api) {
   api.use('templating', 'client');
   api.use('underscore', 'client');
   api.use('iron:router', 'client');
+  api.use('tap:i18n', ['client', 'server']);
+
   api.addFiles([
     'lib/collections/technician.js'
   ], [
@@ -31,12 +33,17 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/templates/technicianCreate.html',
+
   ], ['client']);
+
+  api.addFiles([
+    'lib/i18n/en.i18n.json',
+    'lib/i18n/nl.i18n.json',
+  ], ['client', 'server']);
 
   api.addFiles([
     'lib/templates/technicianCreate.js',
   ], ['client']);
 });
 
-Package.onTest(function(api) {
-});
+Package.onTest(function(api) {});
