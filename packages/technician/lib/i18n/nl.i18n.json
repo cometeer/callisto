@@ -1,0 +1,11 @@
+{
+  "firstName": "Voornaam",
+  "middleName": "Tussenvoegsel",
+  "lastName": "Achternaam",
+  "email": "Emailadres",
+  "street": "Straatnaam",
+  "houseNumber": "Huisnummer",
+  "houseNumberAdd": "huisnummertoevoeging",
+  "city": "Plaats",
+  "country": "Land"
+}
